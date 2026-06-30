@@ -4,12 +4,14 @@ export default function Child2(props){
     return(
         <div id= "child2">
         <h2>Second Child Component</h2>
-        {color ? <div class = "greenbox" ></div>
+        {color ? <div className = "greenbox" ></div>
         :
-        <div class = "redbox" ></div>}
-        <input id = "enter" type = "text" onChange={()=>{
-            props.setValue(document.getElementById("enter").value);
-        }} />
+        <div className = "redbox" ></div>}
+        <input
+            id="enter"
+            type="text"
+            onChange={(e) => props.setValue(e.target.value)}
+        />
         </div>
     )
 }
